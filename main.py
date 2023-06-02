@@ -1,10 +1,10 @@
 import subprocess
 
 def play_video(file_path):
-    # Construct the omxplayer command with the loop option
-    command = f"omxplayer --loop {file_path}"
+    # Construct the VLC command to play the video in loop mode
+    command = f"cvlc --loop {file_path}"
 
-    # Start the omxplayer process
+    # Start the VLC process
     process = subprocess.Popen(command, shell=True)
 
     # Wait for the process to finish (you can interrupt it with Ctrl+C)
